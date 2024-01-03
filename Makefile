@@ -20,3 +20,6 @@ publish:
 	npm publish
 
 .PHONY: test
+
+
+brain-games: node bin/brain-games.js
