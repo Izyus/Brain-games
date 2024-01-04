@@ -9,7 +9,6 @@ const playRound = () => {
     Math.floor(min + Math.random() * (max + 1 - min));
   const newNumb = getNumb();
   const numbCheck = (newNumb) => (newNumb % 2 == 0 ? "yes" : "no");
-  console.log(numbCheck(newNumb));
   const question = readlineSync.question(`Question: ${newNumb} `);
 
   if (numbCheck(newNumb) === question.toLowerCase()) {
@@ -34,15 +33,3 @@ const playGame = () => {
   console.log(`Congratulations, ${names}!`);
 };
 playGame();
-// let number = randomInteger(1, 15);
-// const firstQuestion = readlineSync.question(`Question: ${number} `);
-// const checkNumber = (number) => {
-//   if (number % 2 == 0) {
-//     return "yes";
-//   } else {
-//     return "no";
-//   }
-// };
-// if (firstQuestion.toLowerCase() == checkNumber(number)) {
-//   console.log("Correct!");
-// }
