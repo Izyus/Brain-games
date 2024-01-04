@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 import readlineSync from "readline-sync";
 console.log("Welcome to the Brain Games!");
 const names = readlineSync.question("May I have your name? ");
@@ -9,6 +10,7 @@ const playRound = () => {
     Math.floor(min + Math.random() * (max + 1 - min));
   const newNumb = getNumb();
   const numbCheck = (newNumb) => (newNumb % 2 == 0 ? "yes" : "no");
+
   const question = readlineSync.question(`Question: ${newNumb} `);
 
   if (numbCheck(newNumb) === question.toLowerCase()) {
