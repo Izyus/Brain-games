@@ -1,11 +1,9 @@
 #!/usr/bin/env node
 /* eslint-disable no-console */
-import { playGame, names } from "../src/index.js";
+import { playGame, names, getNumb } from "../src/index.js";
 import readlineSync from "readline-sync";
 console.log(`Find the greatest common divisor of given numbers.`);
 const playRound = () => {
-  const getNumb = (min = 1, max = 100) =>
-    Math.floor(min + Math.random() * (max + 1 - min));
   const firstNumber = getNumb();
   const secondNumber = getNumb();
 
