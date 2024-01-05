@@ -1,9 +1,8 @@
 #!/usr/bin/env node
 /* eslint-disable no-console */
 import readlineSync from "readline-sync";
+import { playGame, names } from "../src/index.js";
 console.log("Welcome to the Brain Games!");
-const names = readlineSync.question("May I have your name? ");
-console.log(`Hello, ${names}`);
 console.log(`Answer "yes" if the number is even, otherwise answer "no".`);
 
 const playRound = () => {
@@ -26,13 +25,5 @@ const playRound = () => {
     console.log(`Let's try again, ${names}!`);
   }
 };
-const playGame = () => {
-  for (let i = 0; i < 3; i++) {
-    const isCorrect = playRound();
-    if (!isCorrect) {
-      return;
-    }
-  }
-  console.log(`Congratulations, ${names}!`);
-};
-playGame();
+
+playGame(playRound, names);
