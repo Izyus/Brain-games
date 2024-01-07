@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 /* eslint-disable no-console */
 import readlineSync from "readline-sync";
-import { playGame, names, getNumb } from "../src/index.js";
+import { playGame, names, getNumb } from "../../src/index.js";
 console.log("Welcome to the Brain Games!");
 console.log(`Answer "yes" if the number is even, otherwise answer "no".`);
 
