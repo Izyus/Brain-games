@@ -1,9 +1,9 @@
 #!/usr/bin/env node
 /* eslint-disable no-console */
-import readlineSync from 'readline-sync';
-import { playGame, names, getNumb } from '../../src/index.js';
+import readlineSync from "readline-sync";
+import { playGame, names, getNumb } from "../../src/index.js";
 
-console.log('Find the greatest common divisor of given numbers.');
+console.log("Find the greatest common divisor of given numbers.");
 const playRound = () => {
   const firstNumber = getNumb();
   const secondNumber = getNumb();
@@ -15,18 +15,18 @@ const playRound = () => {
   };
 
   const question = readlineSync.question(
-    `Question: ${firstNumber} ${secondNumber} `,
+    `Question: ${firstNumber} ${secondNumber} `
   );
 
   if (numbCheck(firstNumber, secondNumber) === question.toLowerCase()) {
-    console.log('Correct!');
+    console.log("Correct!");
     return true;
   }
   console.log(
     `'${question}' is wrong answer ;(. Correct answer was '${numbCheck(
       firstNumber,
-      secondNumber,
-    )}'.`,
+      secondNumber
+    )}'.`
   );
   console.log(`Let's try again, ${names}!`);
 };
