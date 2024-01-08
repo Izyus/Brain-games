@@ -6,22 +6,13 @@ console.log(`Answer "yes" if given number is prime. Otherwise answer "no".`);
 const playRound = () => {
   const number = getNumb(1, 100);
   const question = readlineSync.question(`Question: ${number} `);
-  function isPrime(number) {
-    var x = "";
-    if (number < 2) {
-      x = "Число должно быть больше 1";
-    } else if (number === 2) {
-      x = "yes";
+  function isPrime(n) {
+    for (let i = 2; i < n; i++) {
+      if (n % i === 0) return "no";
     }
-    let i = 2;
-    const limit = Math.sqrt(number);
-    while (i <= limit) {
-      i += 1;
-      if (number % i == 0) {
-        x = "no";
-      }
+    if (n > 1) {
+      return "yes";
     }
-    return x;
   }
 
   if (question == isPrime(number)) {
