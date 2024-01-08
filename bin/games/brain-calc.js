@@ -11,10 +11,10 @@ export const playRound = () => {
   const operation = ["+", "-", "*"];
   const randomOperator = operation[getNumb(0, 2)];
   const numbCheck = (newNumb1, newNumb2, randomOperator) => {
-    if (randomOperator === "+") {
+    if (randomOperator == "+") {
       return newNumb1 + newNumb2;
     }
-    if (randomOperator === "-") {
+    if (randomOperator == "-") {
       return newNumb1 - newNumb2;
     }
     return newNumb1 * newNumb2;

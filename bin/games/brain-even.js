@@ -12,7 +12,7 @@ const playRound = () => {
 
   const question = readlineSync.question(`Question: ${newNumb} `);
 
-  if (numbCheck(newNumb) === question.toLowerCase()) {
+  if (numbCheck(newNumb) == question.toLowerCase()) {
     console.log("Correct!");
     return true;
   }
