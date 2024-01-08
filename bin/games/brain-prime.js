@@ -9,9 +9,9 @@ const playRound = () => {
   function isPrime(number) {
     for (let i = 2; i < number; i++) {
       if (number % i === 0) {
-        return "yes";
-      } else if (number !== 1) {
         return "no";
+      } else if (number !== 1) {
+        return "yes";
       }
     }
   }
