@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 /* eslint-disable no-console */
 import readlineSync from 'readline-sync';
-import { playGame, names, getNumb } from '../../src/index';
+import { playGame, names, getNumb } from '../../src/index.js';
 
 console.log('What is the result of the expression?');
 
