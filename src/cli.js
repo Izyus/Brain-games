@@ -6,4 +6,4 @@ const askNameAndGreet = () => {
   console.log(`Hello, ${name}!`);
 };
 
-export default { askNameAndGreet };
+export { askNameAndGreet };
