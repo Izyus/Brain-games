@@ -4,16 +4,24 @@ import readlineSync from "readline-sync";
 import { playGame, names, getNumb } from "../../src/index.js";
 console.log(`Answer "yes" if given number is prime. Otherwise answer "no".`);
 const playRound = () => {
-  const number = getNumb(1, 10);
+  const number = getNumb(1, 100);
   const question = readlineSync.question(`Question: ${number} `);
   function isPrime(number) {
-    for (let i = 2; i < number; i++) {
-      if (number % i === 0) {
-        return "no";
-      } else if (number !== 1) {
-        return "yes";
+    var x = "";
+    if (number < 2) {
+      x = "Число должно быть больше 1";
+    } else if (number === 2) {
+      x = "yes";
+    }
+    let i = 2;
+    const limit = Math.sqrt(number);
+    while (i <= limit) {
+      i += 1;
+      if (number % i == 0) {
+        x = "no";
       }
     }
+    return x;
   }
 
   if (question == isPrime(number)) {
